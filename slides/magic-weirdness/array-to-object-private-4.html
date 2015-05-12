@@ -1,0 +1,9 @@
+<pre><code data-trim>
+$foo = (object) ["\0Foo\0bar" => 'baz'];
+
+$rp = new ReflectionProperty('stdClass', 'bar');
+
+$rp->setAccessible(true);
+
+var_dump($rp->getValue($foo));
+</code></pre>
