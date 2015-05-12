@@ -8,5 +8,13 @@
             "email": "ocramius@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "lisachenko/go-aop-php":  "^0.6.0",
+        "leedavis81/vent":        "^0.1.0",
+        "ocramius/lazy-map":      "^1.0",
+        "ocramius/lazy-property": "^1.0",
+        "doctrine/instantiator":  "^1.0",
+        "leedavis81/altr-ego":    "^1.0",
+        "ocramius/proxy-manager": "^1.0"
+    }
 }
