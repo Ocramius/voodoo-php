@@ -1,0 +1,17 @@
+<pre><code data-trim>
+class CatchAll implements \Go\Aop\Aspect
+{
+    /** @Go\Lang\Annotation\Before("execution(*->*(*))") */
+    public function beforeAnything(\Go\Aop\Intercept\MethodInvocation $invocation)
+    {
+        var_dump($invocation->getMethod()->getName());
+
+        return $invocation->proceed();
+    }
+}
+</code></pre>
+
+<pre><code data-trim>
+$foo->bar();
+$bar->baz();
+</code></pre>
