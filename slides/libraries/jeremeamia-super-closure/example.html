@@ -1,0 +1,9 @@
+<pre><code data-trim>
+$serializer = new SuperClosure\Serializer();
+
+$serialized = $serializer->serialize(function () {
+    echo file_get_contents(__FILE__);
+});
+
+$serializer->unserialize($serialized)->__invoke();
+</code></pre>

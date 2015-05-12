@@ -53,5 +53,8 @@
     "libraries/timetoogo-pinq/timetoogo-pinq.html",
     "libraries/timetoogo-pinq/sql-example.html",
 
+    "libraries/jeremeamia-super-closure/super-closure.html",
+    "libraries/jeremeamia-super-closure/example.html",
+
     "outro/thanks.html"
 ]
