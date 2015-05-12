@@ -1,0 +1,23 @@
+<pre><code data-trim>
+$db
+    ->table('customers')
+    ->where(function ($row) { return $row['age'] <= 50; })
+    ->orderByAscending(function ($row) { return $row['firstName']; })
+    ->select(function ($row) {
+        return ['fullName' => $row['firstName'] . ' ' . $row['lastName']];
+    })
+    ->asArray()
+</code></pre>
+
+<pre><code data-trim>
+SELECT
+    CONCAT(CONCAT(customers.firstName, ' '), customers.lastName) AS fullName
+FROM (
+    SELECT * FROM (
+        SELECT * FROM (SELECT * FROM customers) AS customers
+        WHERE (customers.age <= 50)
+    ) AS customers
+    ORDER BY customers.firstName ASC
+    LIMIT 50 OFFSET 0
+) AS customers
+</code></pre>

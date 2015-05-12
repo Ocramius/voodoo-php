@@ -34,5 +34,8 @@
     "lazy-properties/what-can-we-do-with-that.html",
     "lazy-properties/magic-methods.html",
 
+    "libraries/timetoogo-pinq/timetoogo-pinq.html",
+    "libraries/timetoogo-pinq/sql-example.html",
+
     "outro/thanks.html"
 ]
