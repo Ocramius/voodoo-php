@@ -1,0 +1,19 @@
+<pre><code data-trim>
+class Foo
+{
+    private $bar = '0';
+
+    private saySomething($baz)
+    {
+        return $this->bar . $baz;
+    }
+}
+</code></pre>
+
+<pre><code data-trim>
+$altrEgo = AltrEgo::create(new Foo());
+
+$altrEgo->bar = '11';
+
+var_dump($altrEgo->saySomething('22'));
+</code></pre>
