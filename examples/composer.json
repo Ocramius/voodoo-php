@@ -1,0 +1,12 @@
+{
+    "name": "ocramius/voodoo-php-examples",
+    "description": "A series of examples around obscure PHP practices",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Pivetta",
+            "email": "ocramius@gmail.com"
+        }
+    ],
+    "require": {}
+}
