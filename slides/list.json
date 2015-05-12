@@ -37,6 +37,12 @@
     "libraries/leedavis81-altr-ego/altr-ego.html",
     "libraries/leedavis81-altr-ego/example.html",
 
+    "libraries/leedavis81-vent/vent.html",
+    "libraries/leedavis81-vent/example.html",
+
+    "libraries/ocramius-lazy-map/lazy-map.html",
+    "libraries/ocramius-lazy-map/example.html",
+
     "libraries/timetoogo-pinq/timetoogo-pinq.html",
     "libraries/timetoogo-pinq/sql-example.html",
 

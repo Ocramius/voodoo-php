@@ -1,0 +1,10 @@
+<pre><code data-trim>
+$map = new \LazyMap\CallbackLazyMap(function ($name) {
+    return new \ReflectionClass($name);
+});
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+var_dump($map->ArrayObject);
+var_dump($map->ArrayIterator);
+</code></pre>
