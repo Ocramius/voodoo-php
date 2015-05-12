@@ -24,10 +24,11 @@ class CatchTheBuzzes implements \Go\Aop\Aspect
 
         return $invocation->proceed();
     }
+
     /**
      * @Go\Lang\Annotation\Around("execution(public VoodooPhpExamples\*->*(*))")
      */
-    public function afterMethodInvocation(\Go\Aop\Intercept\MethodInvocation $invocation)
+    public function aroundMethodInvocation(\Go\Aop\Intercept\MethodInvocation $invocation)
     {
         if ('BOOP' === $invocation->getArguments()[0]) {
             echo 'PLEASE DO NOT BOOP!';
@@ -36,6 +37,25 @@ class CatchTheBuzzes implements \Go\Aop\Aspect
         }
 
         return $invocation->proceed();
+    }
+    /**
+     * @Go\Lang\Annotation\Around("access(public VoodooPhpExamples\AccessibleObject->*)")
+     */
+    public function aroundPropertyAccess(\Go\Aop\Intercept\FieldAccess $access)
+    {
+        if (
+            \Go\Aop\Intercept\FieldAccess::WRITE === $access->getAccessType()
+            && ! is_int($access->getValueToSet())
+        ) {
+            throw new \UnexpectedValueException(sprintf(
+                'Tried to set value of type "%s" for field "%s$%s", integer expected integer',
+                gettype($access->getValueToSet()),
+                $access->getField()->getDeclaringClass()->getName(),
+                $access->getField()->getName()
+            ));
+        }
+
+        return $access->proceed();
     }
 }
 
