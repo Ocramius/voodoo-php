@@ -1,0 +1,19 @@
+<p>Simplistic <span class="doctrine-color">puppeteer</span>:</p>
+<pre><code data-trim>
+class Puppeteer
+{
+    public $properties = [];
+
+    public function __construct($puppet)
+    {
+        foreach ((new ReflectionClass($puppet))->getProperties() as $property) {
+            Closure::bind(function (& $properties) use ($property) {
+                $name = $property->getName();
+
+                $properties[$name] = & $this->$name;
+            }, $puppet, $property->getDeclaringClass()->getName())
+                ->__invoke($this->properties);
+        }
+    }
+}
+</code></pre>

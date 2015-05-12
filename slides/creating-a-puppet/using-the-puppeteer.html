@@ -1,0 +1,12 @@
+<pre><code data-trim>
+$user = new User('James', 'Titcumb');
+
+var_dump($user->sayHello());
+
+$puppeteer = new Puppeteer($user);
+
+$puppeteer->properties['name']    = 'A';
+$puppeteer->properties['surname'] = 'Minion';
+
+var_dump($user->sayHello());
+</code></pre>

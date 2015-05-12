@@ -25,6 +25,9 @@
     "magic-tools/constructs.html",
 
     "creating-a-puppet/lets-create-a-puppet.html",
+    "creating-a-puppet/the-object.html",
+    "creating-a-puppet/the-puppeteer.html",
+    "creating-a-puppet/using-the-puppeteer.html",
 
     "outro/thanks.html"
 ]
