@@ -31,6 +31,8 @@
 
     "lazy-properties/hiding-properties.html",
     "lazy-properties/unsetting-properties.html",
+    "lazy-properties/what-can-we-do-with-that.html",
+    "lazy-properties/magic-methods.html",
 
     "outro/thanks.html"
 ]
