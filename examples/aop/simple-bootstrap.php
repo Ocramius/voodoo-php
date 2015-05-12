@@ -21,6 +21,21 @@ class CatchTheBuzzes implements \Go\Aop\Aspect
             'method' => $invocation->getMethod()->getName(),
             'args'   => $invocation->getArguments(),
         ]);
+
+        $invocation->proceed();
+    }
+    /**
+     * @Go\Lang\Annotation\Around("execution(public VoodooPhpExamples\*->*(*))")
+     */
+    public function afterMethodInvocation(\Go\Aop\Intercept\MethodInvocation $invocation)
+    {
+        if ('BOOP' === $invocation->getArguments()[0]) {
+            echo 'PLEASE DO NOT BOOP!';
+
+            return;
+        }
+
+        $invocation->proceed();
     }
 }
 
