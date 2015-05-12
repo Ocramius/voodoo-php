@@ -1,0 +1,22 @@
+<pre><code data-trim>
+class Foo {
+    use Vent\VentTrait;
+    private $bar;
+
+    public function __construct() {
+        $this->registerEvent('read', 'bar', function() {
+            echo 'Reading "bar"' . PHP_EOL;
+        });
+    }
+
+    public function doSomething() {
+        return $this->bar;
+    }
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo = new Foo();
+
+$foo->doSomething();
+</code></pre>
