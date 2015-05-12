@@ -16,5 +16,10 @@
         "doctrine/instantiator":  "^1.0",
         "leedavis81/altr-ego":    "^1.0",
         "ocramius/proxy-manager": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VoodooPhpExamples\\": "src/VoodooPhpExamples"
+        }
     }
 }
