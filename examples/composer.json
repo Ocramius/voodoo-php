@@ -15,7 +15,8 @@
         "ocramius/lazy-property": "^1.0",
         "doctrine/instantiator":  "^1.0",
         "leedavis81/altr-ego":    "^1.0",
-        "ocramius/proxy-manager": "^1.0"
+        "ocramius/proxy-manager": "^1.0",
+        "jeremeamia/SuperClosure": "^2.1"
     },
     "autoload": {
         "psr-4": {
