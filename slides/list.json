@@ -29,5 +29,8 @@
     "creating-a-puppet/the-puppeteer.html",
     "creating-a-puppet/using-the-puppeteer.html",
 
+    "lazy-properties/hiding-properties.html",
+    "lazy-properties/unsetting-properties.html",
+
     "outro/thanks.html"
 ]
