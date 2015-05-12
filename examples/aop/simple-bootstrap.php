@@ -22,7 +22,7 @@ class CatchTheBuzzes implements \Go\Aop\Aspect
             'args'   => $invocation->getArguments(),
         ]);
 
-        $invocation->proceed();
+        return $invocation->proceed();
     }
     /**
      * @Go\Lang\Annotation\Around("execution(public VoodooPhpExamples\*->*(*))")
@@ -35,7 +35,7 @@ class CatchTheBuzzes implements \Go\Aop\Aspect
             return;
         }
 
-        $invocation->proceed();
+        return $invocation->proceed();
     }
 }
 
