@@ -71,6 +71,8 @@
         "path":       "magic-weirdness/the-perfect-immutable-object.html"
     },
 
+    "libraries/some-libraries.html",
+
     "libraries/leedavis81-vent/vent.html",
     "libraries/leedavis81-vent/example.html",
 
