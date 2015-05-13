@@ -52,7 +52,15 @@
     },
     "magic-weirdness/array-to-object-private-1.html",
     "magic-weirdness/array-to-object-private-2.html",
+    {
+        "background": "assets/img/neutral-suspicious.png",
+        "path":       null
+    },
     "magic-weirdness/array-to-object-private-3.html",
+    {
+        "background": "assets/img/wtf.jpeg",
+        "path":       null
+    },
     "magic-weirdness/array-to-object-private-4.html",
     "magic-weirdness/array-to-object-private-5.html",
     {
