@@ -215,6 +215,12 @@
                     
                 
                     
+                        <section data-background="assets/img/warning.jpeg" ></section>
+
+                    
+                    
+                
+                    
                         <section><h2>
     What
     <br/>
@@ -797,6 +803,110 @@ $serialized = $serializer->serialize(function () {
 });
 
 $serializer->unserialize($serialized)->__invoke();
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2><span class="doctrine-color">ocramius/proxy-manager</span></h2>
+
+<p class="fragment">All sorts of crazy hacks around <span class="php-color">object state</span></p>
+
+<p class="fragment">
+    <span class="doctrine-color">Lazy objects</span>,
+    <span class="zf-color">AOP</span>,
+    <span class="php-color">Decorators</span>
+</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+class Foo {
+    public function __construct()
+    {
+        sleep(5);
+    }
+
+    public function doFoo()
+    {
+        echo "Foo!";
+    }
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$factory = new LazyLoadingValueHolderFactory();
+
+$proxy = $factory->createProxy(
+    'Foo',
+    function (& $wrapped, $p, $m, $args, & $initializer) {
+        $initializer   = null;
+        $wrappedObject = new Foo();
+    }
+);
+
+var_dump($proxy);
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+class Foo {
+    public function doFoo()
+    {
+        echo "Foo!";
+    }
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$factory = new AccessInterceptorScopeLocalizerFactory();
+
+$proxy = $factory->createProxy(
+    new Foo(),
+    ['doFoo' => function ($proxy) { echo "pre\n"; }],
+    ['doFoo' => function ($proxy) { echo "post\n"; }]
+);
+
+$proxy->doFoo();
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+class Foo {
+    private $bar = 'baz';
+
+    public function sayBar()
+    {
+        echo $this->bar;
+    }
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$factory = new LazyLoadingGhostFactory();
+
+$proxy = $factory->createProxy(
+    'Foo',
+    function ($p, $m, $args, & $initializer, array $properties) {
+        $initializer              = null;
+        $properties["\0Foo\0bar"] = 'HAHA!';
+    }
+);
+
+$proxy->sayBar();
 </code></pre>
 </section>
 

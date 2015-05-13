@@ -18,6 +18,11 @@
     "voodoo/voodoo-is-dangerous.html",
     "voodoo/use-with-caution.html",
 
+    {
+        "background": "assets/img/warning.jpeg",
+        "path":       null
+    },
+
     "magic-tools/magic-tools.html",
     "magic-tools/magic-methods.html",
     "magic-tools/reflection.html",
