@@ -1,0 +1,27 @@
+<pre><code data-trim>
+class Foo {
+    public function __construct()
+    {
+        sleep(5);
+    }
+
+    public function doFoo()
+    {
+        echo "Foo!";
+    }
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$factory = new LazyLoadingValueHolderFactory();
+
+$proxy = $factory->createProxy(
+    'Foo',
+    function (& $wrapped, $p, $m, $args, & $initializer) {
+        $initializer   = null;
+        $wrappedObject = new Foo();
+    }
+);
+
+var_dump($proxy);
+</code></pre>

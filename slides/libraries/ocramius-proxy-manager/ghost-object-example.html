@@ -1,0 +1,24 @@
+<pre><code data-trim>
+class Foo {
+    private $bar = 'baz';
+
+    public function sayBar()
+    {
+        echo $this->bar;
+    }
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$factory = new LazyLoadingGhostFactory();
+
+$proxy = $factory->createProxy(
+    'Foo',
+    function ($p, $m, $args, & $initializer, array $properties) {
+        $initializer              = null;
+        $properties["\0Foo\0bar"] = 'HAHA!';
+    }
+);
+
+$proxy->sayBar();
+</code></pre>

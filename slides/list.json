@@ -85,6 +85,11 @@
     "libraries/jeremeamia-super-closure/super-closure.html",
     "libraries/jeremeamia-super-closure/example.html",
 
+    "libraries/ocramius-proxy-manager/proxy-manager.html",
+    "libraries/ocramius-proxy-manager/lazy-object-example.html",
+    "libraries/ocramius-proxy-manager/access-interceptor-example.html",
+    "libraries/ocramius-proxy-manager/ghost-object-example.html",
+
     {
         "background": "assets/img/thank-you.gif",
         "path":       null
