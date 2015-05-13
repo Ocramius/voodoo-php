@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "53a85c42fd6bb9b543ae7e4a2dfe8bcb",
+    "hash": "ac7914239c4602cfc3f6d83c1d0decd6",
     "packages": [
         {
             "name": "andrewsville/php-token-reflection",
@@ -656,29 +656,31 @@
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "a80a39fac4fbd771aea7d3871929933a3a1bbf3e"
+                "reference": "7badedb5f8afaaccd496a096daadb19d7bf2b374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/a80a39fac4fbd771aea7d3871929933a3a1bbf3e",
-                "reference": "a80a39fac4fbd771aea7d3871929933a3a1bbf3e",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/7badedb5f8afaaccd496a096daadb19d7bf2b374",
+                "reference": "7badedb5f8afaaccd496a096daadb19d7bf2b374",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
+                "php": "~5.5|~7.0",
                 "zendframework/zend-code": ">2.2.5,<3.0"
             },
             "require-dev": {
+                "couscous/couscous": "dev-master@DEV",
                 "ext-phar": "*",
                 "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "1.5.*"
+                "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
                 "ocramius/generated-hydrator": "To have very fast object to array to object conversion for ghost objects",
+                "php": ">5.6 if you work with internal PHP classes, as reflection instantiation does not work with older PHP versions",
                 "zendframework/zend-json": "To have the JsonRpc adapter (Remote Object feature)",
                 "zendframework/zend-soap": "To have the Soap adapter (Remote Object feature)",
                 "zendframework/zend-stdlib": "To use the hydrator proxy",
@@ -703,7 +705,7 @@
                 {
                     "name": "Marco Pivetta",
                     "email": "ocramius@gmail.com",
-                    "homepage": "http://ocramius.github.com/"
+                    "homepage": "http://ocramius.github.io/"
                 }
             ],
             "description": "A library providing utilities to generate, instantiate and generally operate with Object Proxies",
@@ -715,7 +717,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "time": "2014-12-12 10:59:05"
+            "time": "2015-04-26 21:48:53"
         },
         {
             "name": "zendframework/zend-code",
@@ -864,7 +866,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ocramius/proxy-manager": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
