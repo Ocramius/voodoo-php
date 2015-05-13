@@ -85,6 +85,9 @@
     "libraries/jeremeamia-super-closure/super-closure.html",
     "libraries/jeremeamia-super-closure/example.html",
 
-    "outro/thanks.html",
+    {
+        "background": "assets/img/thank-you.gif",
+        "path":       null
+    },
     "outro/rate.html"
 ]
