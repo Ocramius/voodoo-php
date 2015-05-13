@@ -29,6 +29,9 @@
     "creating-a-puppet/the-puppeteer.html",
     "creating-a-puppet/using-the-puppeteer.html",
 
+    "libraries/leedavis81-altr-ego/altr-ego.html",
+    "libraries/leedavis81-altr-ego/example.html",
+
     "lazy-properties/hiding-properties.html",
     "lazy-properties/unsetting-properties.html",
     "lazy-properties/what-can-we-do-with-that.html",
@@ -67,9 +70,6 @@
         "background": "assets/img/trollface.jpg",
         "path":       "magic-weirdness/the-perfect-immutable-object.html"
     },
-
-    "libraries/leedavis81-altr-ego/altr-ego.html",
-    "libraries/leedavis81-altr-ego/example.html",
 
     "libraries/leedavis81-vent/vent.html",
     "libraries/leedavis81-vent/example.html",
