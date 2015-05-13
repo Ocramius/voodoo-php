@@ -96,6 +96,11 @@
     "libraries/ocramius-proxy-manager/ghost-object-example.html",
 
     {
+        "background": "assets/img/don-t-try-this-at-home.jpg",
+        "path":       null
+    },
+
+    {
         "background": "assets/img/thank-you.gif",
         "path":       null
     },
