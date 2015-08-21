@@ -1,6 +1,6 @@
 <?php
 
-namespace VoodooPhpExamples;
+namespace VoodooPhpExamples\Strict;
 
 class ClassWithIntProperty
 {
