@@ -78,6 +78,9 @@
 
     "libraries/some-libraries.html",
 
+    "libraries/doctrine-instantiator/doctrine-instantiator.html",
+    "libraries/doctrine-instantiator/doctrine-instantiator-example.html",
+
     "libraries/leedavis81-vent/vent.html",
     "libraries/leedavis81-vent/example.html",
 

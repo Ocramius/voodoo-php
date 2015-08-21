@@ -1,0 +1,18 @@
+<pre><code data-trim>
+class NotInstantiableSingleton
+{
+    public static function getInstance() { /* horror */ }
+
+    private function __construct() {}
+}
+</code></pre>
+
+<pre><code data-trim>
+$instance = new NotInstantiableSingleton(); // crash
+</code></pre>
+
+<pre><code data-trim>
+$instantiator = new \Doctrine\Instantiator\Instantiator();
+
+$instance = $instantiator->instantiate('NotInstantiableSingleton');
+</code></pre>
