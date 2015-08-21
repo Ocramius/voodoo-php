@@ -1,6 +1,6 @@
 <?php
 
-namespace VoodooPhpExamples\Strict;
+namespace VoodooPhpExamples\Strict\Railway;
 
 /**
  * CHOO CHOO!
