@@ -1,0 +1,20 @@
+<pre><code data-trim>
+class Foo {
+    /**
+     * @var \stdClass[]
+     */
+    public $bar = [];
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo = new Foo();
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo->bar = [new \stdClass()];
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo->bar = new \stdClass; // crash
+</code></pre>

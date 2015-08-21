@@ -97,6 +97,7 @@
 
     "libraries/strict-php/strict-php.html",
     "libraries/strict-php/strict-php-turns-php-into-java.html",
+    "libraries/strict-php/strict-php-generic-example.html",
 
     {
         "background": "assets/img/don-t-try-this-at-home.jpg",
