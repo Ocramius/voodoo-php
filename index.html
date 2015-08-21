@@ -915,6 +915,50 @@ $proxy->sayBar();
                     
                 
                     
+                        <section><h2><span class="doctrine-color">roave/strict-php</span></h2>
+
+<p class="fragment"><strong>DEV-MASTER only!!!</strong></p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><h2>Turns <span class="php-color">PHP</span> into <span class="zf-color">JAVA</span></h2>
+
+<p class="fragment">(not really)</p>
+</section>
+
+                    
+                    
+                
+                    
+                        <section><pre><code data-trim>
+class Foo {
+    /**
+     * @var \stdClass[]
+     */
+    public $bar = [];
+}
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo = new Foo();
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo->bar = [new \stdClass()];
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+$foo->bar = new \stdClass; // crash
+</code></pre>
+</section>
+
+                    
+                    
+                
+                    
                         <section data-background="assets/img/don-t-try-this-at-home.jpg" ></section>
 
                     
