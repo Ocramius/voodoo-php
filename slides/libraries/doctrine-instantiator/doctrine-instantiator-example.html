@@ -7,11 +7,11 @@ class NotInstantiableSingleton
 }
 </code></pre>
 
-<pre><code data-trim>
+<pre class="fragment"><code data-trim>
 $instance = new NotInstantiableSingleton(); // crash
 </code></pre>
 
-<pre><code data-trim>
+<pre class="fragment"><code data-trim>
 $instantiator = new \Doctrine\Instantiator\Instantiator();
 
 $instance = $instantiator->instantiate('NotInstantiableSingleton');
