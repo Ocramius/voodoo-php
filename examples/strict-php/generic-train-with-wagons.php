@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-// require __DIR__ . '/init-strict.php';
+require __DIR__ . '/init-strict.php';
 
 $train = new \VoodooPhpExamples\Strict\Railway\Train(
     [
