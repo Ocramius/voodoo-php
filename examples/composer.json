@@ -9,14 +9,14 @@
         }
     ],
     "require": {
-        "lisachenko/go-aop-php":  "^0.6.0",
         "leedavis81/vent":        "^0.1.0",
         "ocramius/lazy-map":      "^1.0",
         "ocramius/lazy-property": "^1.0",
         "doctrine/instantiator":  "^1.0",
         "leedavis81/altr-ego":    "^1.0",
         "ocramius/proxy-manager": "dev-master@DEV",
-        "jeremeamia/SuperClosure": "^2.1"
+        "jeremeamia/SuperClosure": "^2.1",
+        "goaop/framework":         "^0.6.1"
     },
     "autoload": {
         "psr-4": {
