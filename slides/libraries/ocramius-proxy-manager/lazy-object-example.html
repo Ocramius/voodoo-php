@@ -19,7 +19,7 @@ $proxy = $factory->createProxy(
     'Foo',
     function (& $wrapped, $p, $m, $args, & $initializer) {
         $initializer   = null;
-        $wrappedObject = new Foo();
+        $wrapped       = new Foo();
     }
 );
 
