@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0cb43f3b92838295012f8002817b67ee",
+    "hash": "ca44429a06d26e00563c1c85ed80a9eb",
     "packages": [
         {
             "name": "andrewsville/php-token-reflection",
@@ -55,7 +55,7 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.2.6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
@@ -123,7 +123,7 @@
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
@@ -177,7 +177,7 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "v1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
@@ -231,23 +231,23 @@
         },
         {
             "name": "goaop/framework",
-            "version": "0.6.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/goaop/framework.git",
-                "reference": "4411e951d06d7041e3128fefd6fe6a0a344cd1ba"
+                "reference": "78bdd87a4d448a32a0401258473f30341330960f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/goaop/framework/zipball/4411e951d06d7041e3128fefd6fe6a0a344cd1ba",
-                "reference": "4411e951d06d7041e3128fefd6fe6a0a344cd1ba",
+                "url": "https://api.github.com/repos/goaop/framework/zipball/78bdd87a4d448a32a0401258473f30341330960f",
+                "reference": "78bdd87a4d448a32a0401258473f30341330960f",
                 "shasum": ""
             },
             "require": {
-                "andrewsville/php-token-reflection": "~1.3",
+                "andrewsville/php-token-reflection": "~1.4",
                 "doctrine/annotations": "~1.0",
                 "jakubledl/dissect": "~1.0",
-                "php": ">=5.3.0"
+                "php": ">=5.4.0"
             },
             "require-dev": {
                 "symfony/console": "~2.1"
@@ -261,7 +261,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.6-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -279,7 +279,7 @@
                     "homepage": "https://github.com/lisachenko"
                 }
             ],
-            "description": "Library for aspect-oriented programming in PHP.",
+            "description": "Framework for aspect-oriented programming in PHP.",
             "homepage": "http://go.aopphp.com/",
             "keywords": [
                 "aop",
@@ -287,20 +287,61 @@
                 "library",
                 "php"
             ],
-            "time": "2015-07-05 11:37:33"
+            "time": "2015-07-28 06:42:43"
         },
         {
-            "name": "jakubledl/dissect",
-            "version": "v1.0.1",
+            "name": "internations/type-jail",
+            "version": "v0.4.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jakubledl/dissect.git",
-                "reference": "d3a391de31e45a247e95cef6cf58a91c05af67c4"
+                "url": "https://github.com/InterNations/type-jail.git",
+                "reference": "0a0cd983ceaf25b873099455155fb2864b5e565a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jakubledl/dissect/zipball/d3a391de31e45a247e95cef6cf58a91c05af67c4",
-                "reference": "d3a391de31e45a247e95cef6cf58a91c05af67c4",
+                "url": "https://api.github.com/repos/InterNations/type-jail/zipball/0a0cd983ceaf25b873099455155fb2864b5e565a",
+                "reference": "0a0cd983ceaf25b873099455155fb2864b5e565a",
+                "shasum": ""
+            },
+            "require": {
+                "ocramius/proxy-manager": "~1.0"
+            },
+            "require-dev": {
+                "internations/kodierungsregelwerksammlung": "*",
+                "internations/testing-component": "*",
+                "phpunit/phpunit": "~4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "InterNations\\Component\\TypeJail\\": "src/InterNations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Strojny",
+                    "email": "lars.strojny@internations.org"
+                }
+            ],
+            "description": "Enforce type constraints",
+            "time": "2015-07-29 08:15:21"
+        },
+        {
+            "name": "jakubledl/dissect",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jakubledl/dissect.git",
+                "reference": "112ee99f32b0884821f7df4b93ba922461dcf916"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jakubledl/dissect/zipball/112ee99f32b0884821f7df4b93ba922461dcf916",
+                "reference": "112ee99f32b0884821f7df4b93ba922461dcf916",
                 "shasum": ""
             },
             "require": {
@@ -342,24 +383,24 @@
                 "parser",
                 "parsing"
             ],
-            "time": "2013-01-29 21:29:14"
+            "time": "2013-01-15 19:48:58"
         },
         {
             "name": "jeremeamia/SuperClosure",
-            "version": "2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeremeamia/super_closure.git",
-                "reference": "b712f39c671e5ead60c7ebfe662545456aade833"
+                "reference": "155fadced44802618435130ed7e16e44a2575e65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeremeamia/super_closure/zipball/b712f39c671e5ead60c7ebfe662545456aade833",
-                "reference": "b712f39c671e5ead60c7ebfe662545456aade833",
+                "url": "https://api.github.com/repos/jeremeamia/super_closure/zipball/155fadced44802618435130ed7e16e44a2575e65",
+                "reference": "155fadced44802618435130ed7e16e44a2575e65",
                 "shasum": ""
             },
             "require": {
-                "nikic/php-parser": "~1.0",
+                "nikic/php-parser": "~1.2",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -369,7 +410,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -386,7 +427,7 @@
                     "name": "Jeremy Lindblom",
                     "email": "jeremeamia@gmail.com",
                     "homepage": "https://github.com/jeremeamia",
-                    "role": "Developer"
+                    "role": "developer"
                 }
             ],
             "description": "Serialize Closure objects, including their context and binding",
@@ -400,7 +441,7 @@
                 "serialize",
                 "tokenizer"
             ],
-            "time": "2015-03-11 20:06:43"
+            "time": "2015-06-09 19:13:35"
         },
         {
             "name": "leedavis81/altr-ego",
@@ -498,7 +539,7 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v1.4.0",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
@@ -543,23 +584,23 @@
         },
         {
             "name": "ocramius/lazy-map",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/LazyMap.git",
-                "reference": "7fe3d347f5e618bcea7d39345ff83f3651d8b752"
+                "reference": "5c77102e225d225ae2d74d5f2cc488527834b821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/LazyMap/zipball/7fe3d347f5e618bcea7d39345ff83f3651d8b752",
-                "reference": "7fe3d347f5e618bcea7d39345ff83f3651d8b752",
+                "url": "https://api.github.com/repos/Ocramius/LazyMap/zipball/5c77102e225d225ae2d74d5f2cc488527834b821",
+                "reference": "5c77102e225d225ae2d74d5f2cc488527834b821",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "athletic/athletic": "~0.1.6",
+                "athletic/athletic": "~0.1.7",
                 "phpmd/phpmd": "1.5.*",
                 "phpunit/phpunit": ">=3.7",
                 "satooshi/php-coveralls": "~0.6",
@@ -597,20 +638,20 @@
                 "map",
                 "service location"
             ],
-            "time": "2013-11-09 22:30:54"
+            "time": "2014-05-01 22:15:23"
         },
         {
             "name": "ocramius/lazy-property",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/LazyProperty.git",
-                "reference": "5e9ae0a96273c85e979db6bd6ac1fabfd6be17cb"
+                "reference": "c6f420f934a633b3bcccb6b057a8c10a8cdcc908"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/LazyProperty/zipball/5e9ae0a96273c85e979db6bd6ac1fabfd6be17cb",
-                "reference": "5e9ae0a96273c85e979db6bd6ac1fabfd6be17cb",
+                "url": "https://api.github.com/repos/Ocramius/LazyProperty/zipball/c6f420f934a633b3bcccb6b057a8c10a8cdcc908",
+                "reference": "c6f420f934a633b3bcccb6b057a8c10a8cdcc908",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +693,7 @@
                 "lazy loading",
                 "utility"
             ],
-            "time": "2014-02-19 16:24:09"
+            "time": "2014-02-23 16:28:10"
         },
         {
             "name": "ocramius/proxy-manager",
@@ -719,8 +760,220 @@
             "time": "2015-08-16 21:34:30"
         },
         {
+            "name": "phpdocumentor/reflection-common",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
+                "reference": "8dfc66d8a72f6741ed9f5a39227f99f78ae8d9a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/8dfc66d8a72f6741ed9f5a39227f99f78ae8d9a5",
+                "reference": "8dfc66d8a72f6741ed9f5a39227f99f78ae8d9a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaap van Otterdijk",
+                    "email": "opensource@ijaap.nl"
+                }
+            ],
+            "description": "Common reflection classes used by phpdocumentor to reflect the code structure",
+            "homepage": "http://www.phpdoc.org",
+            "keywords": [
+                "FQSEN",
+                "phpDocumentor",
+                "phpdoc",
+                "reflection",
+                "static analysis"
+            ],
+            "time": "2015-08-09 12:13:56"
+        },
+        {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "reference": "d68dbdc53dc358a816f00b300704702b2eaff7b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "dflydev/markdown": "~1.0",
+                "erusev/parsedown": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "phpDocumentor": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "mike.vanriel@naenius.com"
+                }
+            ],
+            "time": "2015-02-03 12:10:50"
+        },
+        {
+            "name": "phpdocumentor/type-resolver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/TypeResolver.git",
+                "reference": "83e31258fb03b9a27884a83b81501cb4cb297a81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/83e31258fb03b9a27884a83b81501cb4cb297a81",
+                "reference": "83e31258fb03b9a27884a83b81501cb4cb297a81",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "phpdocumentor/reflection-common": "^1.0@dev"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "phpDocumentor\\Reflection\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "me@mikevanriel.com"
+                }
+            ],
+            "time": "2015-07-18 13:58:32"
+        },
+        {
+            "name": "roave/strict-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roave/StrictPhp.git",
+                "reference": "0c1be91707fce77357dd4376341348ff1ab8dcda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/StrictPhp/zipball/0c1be91707fce77357dd4376341348ff1ab8dcda",
+                "reference": "0c1be91707fce77357dd4376341348ff1ab8dcda",
+                "shasum": ""
+            },
+            "require": {
+                "goaop/framework": "~1.0.0@ALPHA",
+                "internations/type-jail": "0.4.*",
+                "php": "~5.6|~7.0",
+                "phpdocumentor/reflection-docblock": "~2.0",
+                "phpdocumentor/type-resolver": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StrictPhp\\": "src/StrictPhp"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jefersson Nathan",
+                    "email": "malukenho@phpse.net"
+                },
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.io/"
+                }
+            ],
+            "description": "A strict runtime type and invariant checker for developing safer PHP applications",
+            "homepage": "https://github.com/Roave/StrictPhp",
+            "keywords": [
+                "analysis",
+                "continuous integration",
+                "development",
+                "php",
+                "strict",
+                "type safety"
+            ],
+            "time": "2015-07-30 19:46:51"
+        },
+        {
             "name": "zendframework/zend-code",
-            "version": "2.5.2",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-code.git",
@@ -773,16 +1026,16 @@
         },
         {
             "name": "zendframework/zend-eventmanager",
-            "version": "2.5.2",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-eventmanager.git",
-                "reference": "135af03d07fd048c322259aab6611d2be290475c"
+                "reference": "2308f72bc3e428581d416767c0bbb9d75bfec571"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/135af03d07fd048c322259aab6611d2be290475c",
-                "reference": "135af03d07fd048c322259aab6611d2be290475c",
+                "url": "https://api.github.com/repos/zendframework/zend-eventmanager/zipball/2308f72bc3e428581d416767c0bbb9d75bfec571",
+                "reference": "2308f72bc3e428581d416767c0bbb9d75bfec571",
                 "shasum": ""
             },
             "require": {
@@ -814,20 +1067,20 @@
                 "eventmanager",
                 "zf2"
             ],
-            "time": "2015-07-16 19:00:49"
+            "time": "2015-07-16 19:02:45"
         },
         {
             "name": "zendframework/zend-stdlib",
-            "version": "2.6.0",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-stdlib.git",
-                "reference": "a35758803fc9051ec1aff43989e679b6b451b1b4"
+                "reference": "297c69931ebc0d17a454656fd3b63e3fb0098f1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/a35758803fc9051ec1aff43989e679b6b451b1b4",
-                "reference": "a35758803fc9051ec1aff43989e679b6b451b1b4",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/297c69931ebc0d17a454656fd3b63e3fb0098f1d",
+                "reference": "297c69931ebc0d17a454656fd3b63e3fb0098f1d",
                 "shasum": ""
             },
             "require": {
@@ -870,14 +1123,22 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2015-07-21 17:08:05"
+            "time": "2015-07-21 17:11:52"
         }
     ],
     "packages-dev": [],
-    "aliases": [],
-    "minimum-stability": "stable",
+    "aliases": [
+        {
+            "alias": "1.1.99",
+            "alias_normalized": "1.1.99.0",
+            "version": "9999999-dev",
+            "package": "ocramius/proxy-manager"
+        }
+    ],
+    "minimum-stability": "dev",
     "stability-flags": {
-        "ocramius/proxy-manager": 20
+        "ocramius/proxy-manager": 20,
+        "roave/strict-php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

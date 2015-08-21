@@ -2,6 +2,7 @@
     "name": "ocramius/voodoo-php-examples",
     "description": "A series of examples around obscure PHP practices",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Marco Pivetta",
@@ -14,9 +15,10 @@
         "ocramius/lazy-property": "^1.0",
         "doctrine/instantiator":  "^1.0",
         "leedavis81/altr-ego":    "^1.0",
-        "ocramius/proxy-manager": "dev-master@DEV",
+        "ocramius/proxy-manager": "dev-master as 1.1.99",
         "jeremeamia/SuperClosure": "^2.1",
-        "goaop/framework":         "^0.6.1"
+        "goaop/framework":         "1.*",
+        "roave/strict-php":        "dev-master@DEV"
     },
     "autoload": {
         "psr-4": {
