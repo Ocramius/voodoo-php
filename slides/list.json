@@ -95,6 +95,9 @@
     "libraries/ocramius-proxy-manager/access-interceptor-example.html",
     "libraries/ocramius-proxy-manager/ghost-object-example.html",
 
+    "libraries/strict-php/strict-php.html",
+    "libraries/strict-php/strict-php-turns-php-into-java.html",
+
     {
         "background": "assets/img/don-t-try-this-at-home.jpg",
         "path":       null
