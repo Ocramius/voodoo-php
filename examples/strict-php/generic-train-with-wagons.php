@@ -13,12 +13,12 @@ $train = new \VoodooPhpExamples\Strict\Railway\Train(
 
 $train->boardPassengers([
     [
-        new \VoodooPhpExamples\Strict\Railway\Passenger('Maximilian', 'Berghof'), // @TODO
+        new \VoodooPhpExamples\Strict\Railway\Passenger('Maximilian', 'Berghoff'),
         new \VoodooPhpExamples\Strict\Railway\Passenger('Andreas', 'Heigl'),
     ],
     [
         new \VoodooPhpExamples\Strict\Railway\Passenger('Benjamin', 'Eberlei'),
-        new \VoodooPhpExamples\Strict\Railway\Passenger('Kore', 'Normann'), // @TODO check name
+        new \VoodooPhpExamples\Strict\Railway\Passenger('Kore', 'Nordmann'),
     ],
     [
         new \VoodooPhpExamples\Strict\Railway\Passenger('Marco', 'Pivetta'),
