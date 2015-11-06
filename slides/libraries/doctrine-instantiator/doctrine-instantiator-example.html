@@ -12,7 +12,6 @@ $instance = new NotInstantiableSingleton(); // crash
 </code></pre>
 
 <pre class="fragment"><code data-trim>
-$instantiator = new \Doctrine\Instantiator\Instantiator();
-
-$instance = $instantiator->instantiate('NotInstantiableSingleton');
+$instance = (new \Doctrine\Instantiator\Instantiator())
+    ->instantiate('NotInstantiableSingleton');
 </code></pre>
