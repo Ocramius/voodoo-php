@@ -355,7 +355,8 @@ class User
 
     public function sayHello()
     {
-        return 'Hello, I\'m ' . $this->name . ' ' . $this->surname . '!' . PHP_EOL;
+        return 'Hello, I\'m ' . $this->name . ' '
+            . $this->surname . '!' . PHP_EOL;
     }
 }
 </code></pre>
@@ -367,21 +368,23 @@ class User
                     
                         <section><p>Simplistic <span class="doctrine-color">puppeteer</span>:</p>
 <pre><code data-trim>
-class Puppeteer
+class Puppeteer {
+public $properties = [];
+
+public function __construct($puppet)
 {
-    public $properties = [];
+    foreach (
+        (new ReflectionClass($puppet))->getProperties()
+        as $property
+    ) {
+        Closure::bind(function (& $properties) use ($property) {
+            $name = $property->getName();
 
-    public function __construct($puppet)
-    {
-        foreach ((new ReflectionClass($puppet))->getProperties() as $property) {
-            Closure::bind(function (& $properties) use ($property) {
-                $name = $property->getName();
-
-                $properties[$name] = & $this->$name;
-            }, $puppet, $property->getDeclaringClass()->getName())
-                ->__invoke($this->properties);
-        }
+            $properties[$name] = & $this->$name;
+        }, $puppet, $property->getDeclaringClass()->getName())
+            ->__invoke($this->properties);
     }
+}
 }
 </code></pre>
 </section>
@@ -564,8 +567,9 @@ var_dump($thing->saySomething()); // ???
 class CatchAll implements \Go\Aop\Aspect
 {
     /** @Go\Lang\Annotation\Before("execution(*->*(*))") */
-    public function beforeAnything(\Go\Aop\Intercept\MethodInvocation $invocation)
-    {
+    public function beforeAnything(
+        \Go\Aop\Intercept\MethodInvocation $invocation
+    ) {
         var_dump($invocation->getMethod()->getName());
 
         return $invocation->proceed();
@@ -683,7 +687,9 @@ var_dump($rp->getValue($foo));
                         <section><pre><code data-trim>
 $foo = (object) ["\0Foo\0bar" => 'baz'];
 
-var_dump(Closure::bind(function () { return $this->baz; }, $foo, 'Foo')->__invoke());
+var_dump(Closure::bind(function () {
+    return $this->baz;
+}, $foo, 'Foo')->__invoke());
 </code></pre>
 </section>
 
@@ -732,9 +738,8 @@ $instance = new NotInstantiableSingleton(); // crash
 </code></pre>
 
 <pre class="fragment"><code data-trim>
-$instantiator = new \Doctrine\Instantiator\Instantiator();
-
-$instance = $instantiator->instantiate('NotInstantiableSingleton');
+$instance = (new \Doctrine\Instantiator\Instantiator())
+    ->instantiate('NotInstantiableSingleton');
 </code></pre>
 </section>
 
@@ -824,14 +829,17 @@ $db
     ->where(function ($row) { return $row['age'] <= 50; })
     ->orderByAscending(function ($row) { return $row['firstName']; })
     ->select(function ($row) {
-        return ['fullName' => $row['firstName'] . ' ' . $row['lastName']];
+        return [
+            'fullName' => $row['firstName'] . ' ' . $row['lastName']
+        ];
     })
     ->asArray()
 </code></pre>
 
 <pre><code data-trim>
 SELECT
-    CONCAT(CONCAT(customers.firstName, ' '), customers.lastName) AS fullName
+    CONCAT(CONCAT(customers.firstName, ' '), customers.lastName)
+    AS fullName
 FROM (
     SELECT * FROM (
         SELECT * FROM (SELECT * FROM customers) AS customers
