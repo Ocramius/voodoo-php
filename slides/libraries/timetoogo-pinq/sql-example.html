@@ -4,14 +4,17 @@ $db
     ->where(function ($row) { return $row['age'] <= 50; })
     ->orderByAscending(function ($row) { return $row['firstName']; })
     ->select(function ($row) {
-        return ['fullName' => $row['firstName'] . ' ' . $row['lastName']];
+        return [
+            'fullName' => $row['firstName'] . ' ' . $row['lastName']
+        ];
     })
     ->asArray()
 </code></pre>
 
 <pre><code data-trim>
 SELECT
-    CONCAT(CONCAT(customers.firstName, ' '), customers.lastName) AS fullName
+    CONCAT(CONCAT(customers.firstName, ' '), customers.lastName)
+    AS fullName
 FROM (
     SELECT * FROM (
         SELECT * FROM (SELECT * FROM customers) AS customers
